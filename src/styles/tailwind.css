@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app-dialog {
+    @apply !absolute left-0 right-0 top-[--app-dialog-top] mx-auto !flex max-h-[calc(100vh_-_var(--app-dialog-top)*2)] flex-col;
+
+    & > .el-message-box__content {
+      @apply relative mx-[calc(var(--el-messagebox-padding-primary)*-1)] flex-1 overflow-y-auto p-[--el-messagebox-padding-primary];
+    }
+
+    .el-message-box__message {
+      @apply flex-1;
+    }
+  }
+
+  .custom-popover {
+    @apply max-w-[90%] !bg-yellow-300 !p-5 !text-green-800 lg:max-w-[60%];
+
+    & > .el-popper__arrow::before {
+      @apply !bg-yellow-300;
+    }
+  }
+
+  .app-header-blur {
+    @apply bg-[radial-gradient(transparent_1px,var(--el-bg-color)_1px)] bg-[length:4px_4px] backdrop-blur-sm;
+  }
+}

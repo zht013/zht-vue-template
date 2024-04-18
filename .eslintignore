@@ -1,0 +1,9 @@
+node_modules
+public
+dist
+/src/assets
+package.json
+eslint.config.cjs 
+.prettierrc.json
+commitlint.config.cjs
+tailwind.config.ts
